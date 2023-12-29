@@ -43,8 +43,7 @@ const macbook = {
   storage: '1TB SSD 저장 장치',
   display: '16형 Retina 디스플레이',
 };
-
-//파라미터에서 destructuring 문법을 사용
+  //파라미터에서 destructuring 문법을 사용
 function printSummary({ title, color, price }) {
   console.log(`선택한 상품은 '${title}'입니다.`);
   console.log(`색상은 '${color}'이며,`);
