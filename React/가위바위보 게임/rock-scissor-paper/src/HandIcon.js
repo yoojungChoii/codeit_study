@@ -1,3 +1,6 @@
+// HandButton.js 컴포넌트에서 전달된 value를 받아와 
+// 해당하는 아이콘을 표시한다.
+
 import rockImg from './assets/rock.svg';
 import scissorImg from './assets/scissor.svg';
 import paperImg from './assets/paper.svg';
