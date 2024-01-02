@@ -1,14 +1,17 @@
-import HandIcon from './HandIcon';
+import Button from './Button';
+import HandButton from './HandButton';
 
 function App() {
-// 여러 줄 return할 때는 () 소괄호로 묶어 가독성 높이기
+  const handleButtonClick = (value) => console.log(value);
+  const handleClearClick = () => console.log('처음부터');
   return (
-    <div> 
-      <HandIcon /> 
+    <div>
+      <Button onClick={handleClearClick}> 처음부터 </Button>
+      <HandButton value="rock" onClick={handleButtonClick} />
+      <HandButton value="scissor" onClick={handleButtonClick} />
+      <HandButton value="paper" onClick={handleButtonClick} />
     </div>
   );
 }
-
-
 
 export default App;
