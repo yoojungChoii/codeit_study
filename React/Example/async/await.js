@@ -6,7 +6,7 @@ export async function getFoods() {
   return body;
 }
 
-// handleLoadClick함수 선언. async로 비동기 함수 선언
+// handleLoadClick함수 선언. async로 비동기 함수 선언.
 const handleLoadClick = async () => {
   const { foods } = await getFoods();
   setItems(foods);
