@@ -30,7 +30,7 @@ const List = () => {
 // 배열에 id값을 지정 후 key값으로 활용 가능.
 
 //===================================================
-// 아이템 추가
+// 아이템 추가 구현
 // : 앞선 예제에 state를 활용하여 배열에 새로운 요소를 추가
 // React hook은 함수 컴포넌트 내부에서만 호출 가능. 따라서 배열을 List 컴포넌트 내부로 이동시킴
 
@@ -77,3 +77,29 @@ List = () => {
     </>
   );
 };
+
+//=======================================================
+// 아이템 제거 구현
+// : 아이템에서 우클릭하면 배열에서 요소 제거
+// arr.filter()
+
+// onRemove 함수 : id를 받아와서 해당 아이템 제거 기능 구현
+const onRemove = (id) => {
+  const newItems = items.filter((name) => name.id !== id);
+  setItem(newItems);
+};
+
+// items 배열 순회하며 각 아이템에 대해 '<li>' 엘리먼트 생성
+const bucketList = items.map((item) => (
+  <li
+    key={item.id}
+    // 우클릭 활용해서 아이템 제거 기능 추가
+    onContextMenu={(e) => {
+      onRemove(item.id);
+      // 우클릭 시 브라우저의 기본 동작 차단
+      e.preventDefault();
+    }}
+  >
+    {item.name}
+  </li>
+));
