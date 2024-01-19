@@ -9,6 +9,7 @@ const ModalWrapper = styled.div`
   background: var(--Grayscale-10, #fff);
   box-shadow: 0px 16px 20px 0px rgba(48, 48, 48, 0.62);
 `;
+// 오퍼시티 가운데 뜨게
 
 // ModalHeader 스타일드 컴포넌트 정의
 const ModalHeader = styled.header`
