@@ -33,7 +33,7 @@ function TodoInput() {
     fetchTodo();
     // 랜더링 될 때 한 번 실행
   }, []);
-
+  // 타겟의 변경사항을 inputValue에 반영
   const handleInput = (e) => {
     setInputValue(e.target.value);
   };
