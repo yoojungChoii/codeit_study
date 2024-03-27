@@ -14,6 +14,7 @@ UserProfileEditor = ({ userId }) => {
   const { mutate } = useMutation(
     (updatedData) => updateUser(userId, updatedData),
     {
+      // update 성공 시점에
       onSuccess: () => {
         // 데이터 업데이트 후 캐시를 재로드
         queryClient.invalidateQueries(["user", userId]);
